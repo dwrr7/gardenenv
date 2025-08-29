@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}News - GreenNest{% endblock %}
+{% block content %}
+<h2 style="text-align: center;">Latest News</h2>
+
+<div class="container">
+
+    {% for item in news %}
+        <div>
+            <h1>{{ item[1] }}</h1>
+            <hr>
+            <p>{{ item[2] }}</p>
+            <span>Created on <em> {{item[3]}}</em></span>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
